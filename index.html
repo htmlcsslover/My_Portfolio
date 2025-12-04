@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <!-- Tailwind output CSS -->
+    <link href="./output.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <title>Portfolio Tailwind v4</title>
+  </head>
+  <body class="bg-[#1b1d22] ">
+<nav class="bg-black w-full flex justify-between items-center px-4 py-3 md:px-14 xl:px-60 sticky top-0 z-50">
+    
+    <div class="flex items-center gap-15">
+        
+        <div>
+            <a class="font-[poppins] text-white font-bold text-2xl lg:text-4xl ">Raphael</a>
+        </div>
+
+        <div class="hidden lg:block"> 
+            <ul class="flex gap-10 ml-2xl "> 
+                <li><a href="#" class="text-white font-['Poppins'] font-medium relative after:block after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-[#3737ff]  after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full cursor-pointer">Home</a></li>
+                <li><a href="#profile" class="text-white font-['Poppins'] font-medium relative after:block after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-[#3737ff]  after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full cursor-pointer">Profile</a></li>
+                <li><a href="#about" class="text-white font-['Poppins'] font-medium relative after:block after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-[#3737ff]  after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full cursor-pointer">About</a></li>
+                <li><a href="#skills" class="text-white font-['Poppins'] font-medium relative after:block after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-[#3737ff]  after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full cursor-pointer">Skills</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="flex items-center gap-7">
+        
+        <a 
+            href="#profile"
+            class="text-white font-['Poppins'] font-medium bg-blue-600 px-3 py-2 rounded-2xl hover:cursor-pointer max-lg:hidden hover:bg-blue-900 2xl:p4 2xl:text-[20px]"
+        >
+            Contact Me
+        </a>
+
+        <button id="themeToggleBtn" class="cursor-pointer max-lg:block hidden lg:block">
+            <i class="fa-solid fa-sun text-white text-2xl"></i>
+        </button>
+        
+        <button
+            id="menu-btn"
+            class="lg:hidden text-white focus:outline-none relative w-10 h-10 flex flex-col justify-center items-center gap-1.5"
+        >
+            <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+            <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+            <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        </button>
+    </div>
+    
+    <ul
+        id="mobile-menu"
+        class="flex-col gap-4 px-8 py-5 text-white lg:hidden absolute bg-black rounded-b-3xl top-15 right-5 z-40 md:right-15"
+    >
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#aboutMe">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#profile">Contact Me</a></li>
+    </ul>
+</nav>
+
+    <section id="hero" >
+        <div class="flex flex-col gap-5 py-5 px-3 mt-10 md:px-14  md:py-10 md:mt-10 lg:mt-16 xl:px-60 xl:py-30">
+          <p
+            class="font-[Poppins] text-gray-400 opacity-80 text-[12px] lg:text-[14px] animate-fadeInUp"
+          >
+            Hi, I'm Raphael!
+          </p>
+          <h1
+            class="font-black text-white text-left text-4xl md:text-5xl lg:text-6xl lg:w-auto xl:w-auto xl:text-7xl "
+          >
+            Transforming ideas into <br />
+            <span
+              class="font-extrabold bg-linear-to-br from-[#3737ff] to-[#00D4FF] text-transparent bg-clip-text"
+              >mobile apps and dynamic web solutions.</span
+  >
+          </h1>
+          <p
+            class="font-extralight text-white opacity-80 font-['Poppins'] text-[10px] lg:text-[12px]"
+          >
+            Specializing in mobile development and web technologies, I
+            constantly explore the latest innovations to stay ahead in the tech
+            world.
+          </p>
+      </div>
+
+
+    </section>
+
+    <section>
+      <div class="relative overflow-hidden mt-15 md:py-20 xl:py-15">
+        <!-- Carousel Container -->
+        <div id="slider" class="flex gap-15 ">
+          <!-- First set of icons -->
+        <i class="fa-brands fa-html5 text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-brands fa-css3-alt text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-solid fa-database text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-brands fa-square-js text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-brands fa-python text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-solid fa-terminal text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+
+        <!-- Duplicate set 1 -->
+        <i class="fa-brands fa-html5 text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-brands fa-css3-alt text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-solid fa-database text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-brands fa-square-js text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-brands fa-python text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-solid fa-terminal text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+
+        <!-- Duplicate set 2 -->
+        <i class="fa-brands fa-html5 text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-brands fa-css3-alt text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-solid fa-database text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-brands fa-square-js text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-brands fa-python text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-solid fa-terminal text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+
+        <!-- Duplicate set 2 -->
+        <i class="fa-brands fa-html5 text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-brands fa-css3-alt text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-solid fa-database text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-brands fa-square-js text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-brands fa-python text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+        <i class="fa-solid fa-terminal text-3xl md:text-6xl lg:text-7xl text-gray-600 shrink-0"></i>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="mt-15 lg:mt-10">
+
+      <div class="lg:flex lg:justify-evenly lg:items-center  " id="profile">
+        <div class="flex flex-col items-center lg:flex-row lg:gap-15">
+<div class="flex flex-col items-center gap-4 mt-4 mb-4 relative">
+    <img
+        src="image.jpeg"
+        id="darkImage"
+        class="w-60 h-60 object-cover rounded-lg lg:h-90 lg:w-90 absolute transition-opacity duration-500"
+    />
+    <img 
+        src="hkLight.jpg" 
+        id="lightImage"
+        class="w-60 h-60 object-cover rounded-lg lg:h-90 lg:w-90 absolute opacity-0 transition-opacity duration-500" 
+    />
+    <div class="w-60 h-60 lg:h-90 lg:w-90"></div>
+</div>
+
+        <div
+          class="flex flex-col"
+        >
+          <div class="mt-4 flex flex-col items-center">
+            <div class="gap-2 flex flex-col items-center ">
+            <h1
+              class="text-white font-[poppins] font-bold text-3xl"
+            >
+              Raphael Coles
+            </h1>
+
+            <p class="text-blue-500 sm:text-sm font-[poppins] 2xl:text-[18px]">
+              Student/Web Developer
+            </p>
+          </div>
+          </div>
+            <div
+              class="mt-5 flex  lg:mr-auto lg:mt-15 "
+            >
+              <div class="flex gap-10 lg:flex-col lg:gap-7 ">
+                <a href="https://www.facebook.com/Clsrphl"
+                  ><i
+                    class="fa-brands fa-facebook text-white text-4xl hover:text-blue-400 lg:text-[20px]"
+                    ><span
+                      class="text-sm font-[poppins] max-sm:hidden hidden lg:inline-block 2xl:text-[16px] lg:text-1xl"
+                    >
+                      /Clsrphl</span
+                    ></i
+                  ></a
+                >
+                <a href="https://www.instagram.com/zzzxxczczczc/"
+                  ><i
+                    class="fa-brands fa-instagram text-white text-4xl hover:text-blue-400 lg:text-[20px]" 
+                    ><span
+                      class="text-sm font-[poppins] hidden lg:inline-block max-sm:hidden 2xl:text-[16px] lg:text-1xl"
+                    >
+                      /zzzxxczczczc</span
+                    ></i
+                  ></a
+                >
+                <a href="https://github.com/htmlcsslover"
+                  ><i
+                    class="fa-brands fa-github text-white text-4xl hover:text-blue-400 lg:text-[20px]"
+                    ><span
+                      class="text-sm font-[poppins] max-sm:hidden hidden lg:inline-block 2xl:text-[16px] lg:text-1xl"
+                    >
+                      /htmlcsslover</span
+                    ></i
+                  ></a
+                >
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="aboutMe" class="scroll-mt-20 mt-10 ">
+      <div class="flex justify-center flex-col items-center gap-10 ">
+        <h1 class="text-white font-[poppins] font-bold text-3xl">About Me</h1>
+        <p
+          class="text-white font-[poppins] font-medium text-[14px] text-center px-3 w-full md:w-lg md:text-md lg:w-3xl"
+        >
+          IT student at NU Fairview, specializing in web development and
+          building expertise in cybersecurity. Certified in Computer Forensics,
+          Ethical Hacking, Risk Management, and OSINT, I apply technical skills
+          and problem-solving to create secure and innovative digital
+          solutions.<br />
+          <br />
+          Currently studying web development while exploring emerging
+          technologies and collaborating on challenging projects to enhance both
+          my skills and impact.
+        </p>
+      </div>
+    </section>
+
+<section class="">
+
+  <div class="mt-10 xl:mt-20">
+    <h1 class="text-2xl font-[poppins] text-white font-bold text-center ">
+      Take a look at my achievements!
+    </h1>
+
+
+
+    <div class="xl:flex xl:mt-10 xl:justify-center xl:gap-60 lg:mt-10 ">
+          <div class="flex flex-col gap-10 items-center py-4 px-2 max-sm:mt-8 ">
+            <div>
+              <i class="fa-solid fa-code text-white text-2xl"></i
+              ><span class="text-white font-bold text-2xl">
+                Course Certificates</span
+              >
+            </div>
+
+            <p
+              class="text-white font-medium text-[14px] text-center md:w-lg md:text-md lg:w-3xl xl:w-lg"
+            >
+              Earned multiple cybersecurity-related certifications, including
+              Cybersecurity Foundations: Computer Forensics, Ethical Hacking:
+              Scanning Networks, Introduction to Risk Management, Ethical Hacker
+              Certification, Intro to Ethical Hacking, OSINT, Python for
+              Non-Programmers, and Scanning Networks.<br /><br />
+              Most of these were completed via LinkedIn Learning, with some from
+              university programs, strengthening my technical knowledge,
+              practical skills, and confidence in cybersecurity, ethical
+              hacking, and risk assessment.
+            </p>
+          </div>
+          <div class="flex flex-col gap-10 items-center py-4">
+            <div>
+              <i class="fa-solid fa-graduation-cap text-white text-2xl"></i
+              ><span class="text-white font-bold text-2xl">
+                Consistent Dean's Lister</span
+              >
+            </div>
+
+            <p
+              class="text-white font-medium text-[14px] text-center w-auto md:w-lg md:text-md lg:w-3xl xl:w-md"
+            >
+              Recognized for maintaining strong academic performance throughout
+              my studies. This achievement reflects my dedication, discipline,
+              and commitment to continuous learning.
+            </p>
+          </div>
+        </div> 
+        </div>
+        
+  </div>
+
+  
+</section>
+
+    <section class="mt-10 py-10" id="skills">
+      <div class="flex justify-center flex-col items-center gap-10" id="skills">
+        <h1 class="text-white font-[poppins] font-bold text-3xl">Skills</h1>
+
+        <!-- Skills Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-10 max-w-6xl"
+        >
+          <!-- Web Development -->
+          <div
+            class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover:border-blue-600 transition-all duration-300 hover:transform hover:scale-105"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <i class="fa-solid fa-code text-blue-500 text-xl sm:text-2xl"></i>
+              <h3
+                class="text-white font-[poppins] font-bold text-lg sm:text-xl"
+              >
+                Web Development
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-4">
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >HTML</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >CSS</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >JavaScript</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >Tailwind CSS</span
+              >
+            </div>
+          </div>
+
+          <!-- Cybersecurity -->
+          <div
+            class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover:border-purple-600 transition-all duration-300 hover:transform hover:scale-105"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <i
+                class="fa-solid fa-shield-halved text-purple-500 text-xl sm:text-2xl"
+              ></i>
+              <h3
+                class="text-white font-[poppins] font-bold text-lg sm:text-xl"
+              >
+                Cybersecurity
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >Ethical Hacking</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >Computer Forensics</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >Network Scanning</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >OSINT</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >Risk Management</span
+              >
+            </div>
+          </div>
+
+          <!-- Programming Languages -->
+          <div
+            class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover:border-green-600 transition-all duration-300 hover:transform hover:scale-105"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <i
+                class="fa-solid fa-laptop-code text-green-500 text-xl sm:text-2xl"
+              ></i>
+              <h3
+                class="text-white font-[poppins] font-bold text-lg sm:text-xl"
+              >
+                Programming
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >Python</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >JavaScript</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >SQL</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >Java</span
+              >
+            </div>
+          </div>
+
+          <!-- Database Management -->
+          <div
+            class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover:border-orange-600 transition-all duration-300 hover:transform hover:scale-105"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <i
+                class="fa-solid fa-database text-orange-500 text-xl sm:text-2xl"
+              ></i>
+              <h3
+                class="text-white font-[poppins] font-bold text-lg sm:text-xl"
+              >
+                Database
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >MySQL</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >PostgreSQL</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >MongoDB</span
+              >
+            </div>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div
+            class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover:border-pink-600 transition-all duration-300 hover:transform hover:scale-105"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <i
+                class="fa-solid fa-screwdriver-wrench text-pink-500 text-xl sm:text-2xl"
+              ></i>
+              <h3
+                class="text-white font-[poppins] font-bold text-lg sm:text-xl"
+              >
+                Tools & Platforms
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >Git</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >GitHub</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >VS Code</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >Figma</span
+              >
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div
+            class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover:border-cyan-600 transition-all duration-300 hover:transform hover:scale-105"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <i
+                class="fa-solid fa-lightbulb text-cyan-500 text-xl sm:text-2xl"
+              ></i>
+              <h3
+                class="text-white font-[poppins] font-bold text-lg sm:text-xl"
+              >
+                Soft Skills
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >Problem Solving</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >Teamwork</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >Critical Thinking</span
+              >
+              <span
+                class="text-white px-2 py-1 rounded-full text-xs sm:text-sm font-[poppins]"
+                >Communication</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="text-white text-center font-[poppins] text-sm">
+        © 2025 All rights reserved.
+      </p>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

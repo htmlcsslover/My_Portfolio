@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+/* Optional custom component */
+@layer utilities {
+  .example {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.25rem; /* same as text-xl */
+    color: #2563eb; /* blue-600 */
+  }
+  .textGradient {
+    background: #833ab4;
+    background: linear-gradient(
+      90deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(253, 29, 29, 1) 50%,
+      rgba(252, 176, 69, 1) 100%
+    );
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Mobile Menu Animation */
+  #mobile-menu {
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+
+  #mobile-menu.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 0.8;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  /* Infinite Carousel Animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  #slider {
+    animation: scroll 20s linear infinite;
+  }
+
+  #slider:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* ================================================= */
+/* LIGHT MODE STYLES OVERRIDES (Visibility & Colors) */
+/* ================================================= */
+
+/* 1. Global Base & Backgrounds */
+body.light-mode {
+  background-color: #f0f2f5 !important; /* Light gray background */
+  color: #1b1d22 !important; /* Default dark text */
+}
+
+/* 2. Navbar & Links */
+body.light-mode nav {
+  background-color: white !important;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Fix: Targets all hardcoded text-white on links, logo, and list items */
+body.light-mode [class*="text-white"],
+body.light-mode .text-white {
+  color: #1b1d22 !important;
+}
+
+/* Fix: Hamburger lines */
+body.light-mode #menu-btn span {
+  background-color: #1b1d22 !important;
+}
+
+/* Fix: Sun/Moon Icon Color */
+body.light-mode #themeToggleBtn i {
+  color: #1b1d22 !important; /* Must be dark in light mode */
+}
+
+/* Fix: Hover color for Navbar links in light mode */
+body.light-mode nav a:hover {
+  color: #007bff !important;
+}
+
+/* 3. Hero Section Text */
+/* Targets the initial gray text ("Hi, I'm Raphael!") */
+body.light-mode p.text-gray-400 {
+  color: #555 !important;
+  opacity: 1 !important; /* Ensure visibility */
+}
+/* Targets the main dark-colored headings (which were text-white) */
+body.light-mode h1.text-white {
+  color: #1b1d22 !important;
+}
+/* Targets the description text (font-extralight text-white) */
+body.light-mode p.font-extralight {
+  color: #333 !important;
+  opacity: 1 !important;
+}
+
+/* 4. Social Icons & Profile Text */
+/* Targets headings in the Profile section (h1.text-white) */
+body.light-mode section#profile h1 {
+  color: #1b1d22 !important;
+}
+/* Targets social icon text (the /htmlcsslover spans) */
+body.light-mode section#profile span {
+  color: #333 !important;
+}
+/* Targets the social icons themselves */
+body.light-mode section#profile i.fa-brands {
+  color: #1b1d22 !important;
+}
+
+/* 5. Skills Section Cards & Text */
+
+/* Fix: Skills Card Backgrounds (Switch from bg-gray-900/50 to light background) */
+body.light-mode .bg-gray-900\/50 {
+  background-color: white !important;
+  border-color: #ddd !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Fix: All text and headings inside the skills cards to dark color */
+body.light-mode section#skills h1,
+body.light-mode section#skills h3 {
+  color: #1b1d22 !important;
+}
+
+/* Fix: Skill Tag text color and remove background as requested */
+body.light-mode section#skills span.text-white {
+  color: #1b1d22 !important;
+  background-color: transparent !important; /* <-- THIS IS THE KEY CHANGE */
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* 6. Icon Carousel */
+/* Make the carousel icons darker */
+body.light-mode #slider i.text-gray-600 {
+  color: #999 !important;
+}
+
+/* 7. Footer */
+body.light-mode footer {
+  background-color: white !important;
+  border-top: 1px solid #ddd;
+}
+/* Footer text (copyright) */
+body.light-mode footer p {
+  color: #555 !important;
+}
